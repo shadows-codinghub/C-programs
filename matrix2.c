@@ -64,6 +64,11 @@ int main(){
 				printf("Enter number of rows and columns for second matrix:\n");
 				scanf("%d %d",&row,&col);
 				read(mat2,row,col);
+				if (mat1[row][col] != mat2[row][col]) {
+                    			printf("Matrix multiplication not possible! (Columns of first must match rows of second)\n");
+                    			break;
+				}
+
 				add(mat1,mat2,result,row,col);
 				display(result,row,col);
 			}
